@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pipex.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aycami <aycami@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aysesudecami <aysesudecami@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 18:29:49 by aycami            #+#    #+#             */
-/*   Updated: 2025/02/22 19:36:09 by aycami           ###   ########.fr       */
+/*   Updated: 2025/03/22 14:48:13 by aysesudecam      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,17 @@
 # include <errno.h>
 # include <string.h>
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
+
+typedef struct s_var
+{
+	int		fd[2];
+	pid_t	pid1;
+	pid_t	pid2;
+	int		infile;
+	int		outfile;
+}			t_var;
 
 #endif
